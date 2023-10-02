@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./style.css">
+
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+
+</head>
+
+<body class="parentDiv">
+  <b>
+    <span id="wordset"> SPLI </br> TTER </span>
+  </b>
+  <div class="childDiv">
+    <div class="LeftDiv">
+      <div class="childDiv2">Bill</div>
+      <input class="num" type="number" onchange="totalPayableBill()" id="bill">
+      <div class="headSet">Select Tip %</div>
+
+      <span class="boxSet1">
+        <button class="box " onclick="tip5()" id="box1">5%</button>
+        <button class="box" id="box2" onclick="tip10()">10%</button>
+        <button class="box" id="box3"onclick="tip15()">15%</button>
+      </span>
+
+      <br />
+
+      <span class="boxSet2">
+        <button class="box" id="box4" onclick="tip25()">25%</button>
+        <button class="box" id="box5" onclick="tip50()">50%</button>
+        <input class="customInput" id="box6" onchange="customtip(this.value)" placeholder="Custom" type="number"></input>
+      </span>
+      <div class="mobilebutton">
+        <button class="box " onclick="tip5()" id="box1">5%</button>
+        <button class="box" id="box2" onclick="tip10()">10%</button>
+        <button class="box" id="box3"onclick="tip15()">15%</button>
+        <button class="box" id="box4" onclick="tip25()">25%</button>
+        <button class="box" id="box5" onclick="tip50()">50%</button>
+        <input class="customInput" id="box6" onchange="customtip(this.value)" placeholder="Custom" type="number"></input>
+
+      </div>
+
+
+      <div class="childDiv4">Number Of People</div>
+      <input class="num" type="number" id="numpeople" onchange="numberOfPeople()" />
+    </div>
+    <div class="childDiv3">
+      <span class="left">
+        Tip Amount
+      </span>
+      <span class="right" id="tipPR">
+        $3.99
+      </span>
+      <p class="person">/ person</p>                            
+      <span class="left" onchange="billAndTip">
+        Total
+      </span>
+      <span class="right" id="tPR">
+        $3.99
+      </span>
+      <p class="person">/ person</p>
+      <div>
+        <button class="setButton">
+          RESET
+        </button>
+      </div>
+    </div>
+
+<script src="./logic.js"></script>
+
+</body>
+
+</html>
